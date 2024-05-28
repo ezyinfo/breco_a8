@@ -27,6 +27,11 @@ class BrecoDB
         }
     }
 
+    /**
+     * Function that check if a certain table is present in base
+     * @param string tableName Name of the table to check 
+     * @return 
+     */
     private function is_exist($tableName)
     {
         try {
@@ -62,6 +67,9 @@ class BrecoDB
     }
 
 
+    /**
+     * Function that init database
+     */
     public function initDb()
     {
         // Check if tables exists
