@@ -1,0 +1,230 @@
+/** Main declarations */
+:root {
+    --default-margin: 20px;
+    --default-margin-: -20px;
+    --primary-color: #246EF0;
+    --primary-color-dark: #133B80;
+    --light-gray: #888;
+    --green-label: #5A7F06;
+}
+
+/** Fonts */
+@font-face {
+    font-family: 'agencyFb';
+    src: url('../assets/fonts/agencyfb_reg.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'agencyFbB';
+    src: url('../assets/fonts/agencyfb_bold.ttf') format('truetype');
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'agencyFbB', sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/** Some Resets */
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/** Some general settings */
+.shadow {
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px #AAA;
+}
+
+
+.cta_butt {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-family: 'agencyFb';
+    font-size: 1.25em;
+    border-radius: 1.25em;
+    border: none;
+    box-shadow: 5px 5px 0 var(--primary-color-dark);
+}
+
+/** Header */
+header,
+main {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+}
+
+header>img {
+    width: 100%;
+}
+
+header nav {
+    padding: 10px;
+    align-self: start;
+}
+
+header nav img {
+    height: 1em;
+}
+
+header #banner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/** Main block */
+main {
+    flex: 1;
+    display: flex;
+    gap: var(--default-margin);
+    flex-direction: column;
+    padding: var(--default-margin);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-top: var(--default-margin-);
+    border-radius: var(--default-margin) var(--default-margin) 0 0;
+    background-color: #F6F6F6;
+}
+
+/** Search specifics */
+#search-panel {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+}
+
+.evaluate {
+    /* For evaluated time (vs. user declared) */
+    color: var(--light-gray);
+}
+
+#search-panel h3 {
+    color: var(--green-label);
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--default-margin);
+}
+
+.search input {
+    /* More specific declarations */
+    background-color: #FFFF;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-size: 2rem;
+    width: 100%;
+    font-family: 'agencyFb', sans-serif;
+}
+
+.search>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #444444;
+    height: 2px;
+}
+
+.separator p {
+    position: absolute;
+    align-self: center;
+    background-color: #444444;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 30px;
+}
+
+.search-loc {
+    flex: 3;
+    /* grows 3 times faster than time */
+}
+
+.search-time {
+    flex: 1;
+}
+
+#search-days {
+    width: 100%;
+}
+
+#search-days ul {
+    display: flex;
+}
+
+#search-days li {
+    flex: 1;
+    text-align: center;
+}
+
+#search-days li a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    color: var(--light-gray);
+}
+
+#search-days li a.active {
+    color: var(--primary-color);
+}
+
+.full_width {
+    width: 100%;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px;
+    border-radius: var(--default-margin);
+    color: var(--primary-color);
+    color: #133B80;
+    text-decoration: none;
+    min-width: 300px;
+    text-align: center;
+    border: var(--primary-color-dark) 1px solid;
+}
+
+.c2a {
+    background-color: var(--primary-color);
+    color: white;
+
+}
